@@ -1,0 +1,1352 @@
+@font-face {
+    font-family: "FirstWriting";
+    src: url("./fonts/FirstTimeWriting.otf") format("opentype");
+}
+
+body {
+    margin: 0;
+    background: black;
+    color: white;
+    text-align: center;
+    
+}
+
+
+.landing{
+
+    min-height:100vh;
+
+    display:flex;
+    flex-direction:column;
+
+    align-items:center;
+
+    padding-top:70px;
+
+    text-align:center;
+    
+
+
+}
+
+
+h1{
+
+    font-family:"FirstWriting";
+    font-size:90px;
+
+    color:white;
+
+    margin:0;
+
+    line-height:1.1;
+    
+    margin-bottom:10px;
+    
+
+}
+
+
+.author{
+
+    font-family:"FirstWriting";
+    font-size:30px;
+
+    color:white;
+
+    margin-top:10px;
+    margin-bottom:30px;
+
+}
+
+
+.landing-image{
+
+    width:400px;
+    margin-top: 30px;
+    
+
+}
+
+#star{
+    position: absolute;
+    left: -40%;
+    top: -10%;
+    width:95%;
+    z-index:999;
+}
+
+#star img{
+    position: absolute;
+    width: 90%;   /* 원하는 크기 */
+}
+
+.star1{
+    animation: twinkle1 1s infinite;
+}
+
+.star2{
+    animation: twinkle2 1s infinite;
+}
+
+@keyframes twinkle1{
+
+    0%,100%{
+        opacity:1;
+    }
+
+    50%{
+        opacity:0;
+    }
+
+}
+
+@keyframes twinkle2{
+
+    0%,100%{
+        opacity:0;
+    }
+
+    50%{
+        opacity:1;
+    }
+
+}
+
+#musicBtn{
+    position: fixed;
+    top: 3%;
+    right: 3%;
+    width: 4%;
+    cursor: pointer;
+    z-index: 9999;
+}
+
+/* ===========================
+   Scene 1
+=========================== */
+/*
+.scene1{
+
+    min-height:100vh;
+
+    display:flex;
+    flex-direction:column;
+
+    justify-content:center;
+    align-items:center;
+
+    position:relative;
+    transform: translateY(-300px);
+
+}
+
+
+.poem-text{
+
+    position:absolute;
+
+    left: 62%;      
+    bottom:130px;    
+
+    font-family:"FirstWriting";
+    font-size:30px;
+    color:white;
+    text-align: left;
+    
+
+}
+
+
+#line1,
+    #line2,
+    #line3{
+
+    opacity:0;
+
+    transition:0.5s;
+
+}
+
+#bed{
+
+    width:900px;
+    max-width:90%;
+
+    cursor:pointer;
+
+    transition:0.3s;
+
+}
+
+
+#bed:hover{
+
+    transform:scale(1.02);
+
+}
+*/
+
+/* ===========================
+   Scene 1
+=========================== */
+.scene1{
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    transform:translateY(-25%);
+
+}
+
+.bed-container{
+
+    position:relative;
+
+    width:min(900px,90vw);
+
+}
+
+#bed{
+
+    width:100%;
+
+    display:block;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+#bed:hover{
+
+    transform:scale(1.02);
+
+}
+
+.poem-text{
+
+    position:absolute;
+
+    right:12%;
+    bottom:2%;
+
+    width:35%;
+
+    font-family:"FirstWriting";
+
+    font-size:clamp(30px,3vw,60px);
+
+    line-height:0;
+
+    text-align:left;
+
+    color:white;
+
+    right: -7%;
+
+}
+
+#line1,
+#line2,
+#line3{
+
+    opacity:0;
+
+    transition:.5s;
+
+}
+
+
+/*scene2*/
+/*scene2*/
+.scene2 {
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    position:relative;
+
+    top:-300px;
+    width:1440px;
+    height:990px;
+}
+
+.scene2-text{
+
+    position:absolute;
+
+    top:20%;
+
+    font-family:"FirstWriting";
+    font-size:55px;
+
+    color:white;
+
+}
+
+.monster-left{
+
+    position:absolute;
+
+    left:400px;
+    bottom:130px;
+
+    width:600px;
+    pointer-events:none;
+
+}
+
+.monster-right{
+
+    position:absolute;
+
+    right:400px;
+    bottom:130px;
+
+    width:600px;
+    pointer-events:none;
+
+}
+
+.flower-stack{
+
+    position:relative;
+
+    width:180px;
+    height:120px;
+
+    top:170px;
+
+    cursor:pointer;
+
+}
+
+.flower-stack img{
+
+    position:absolute;
+
+    left:0;
+    top:0;
+
+}
+
+#flower1{
+
+    width:100%;
+
+    z-index:1;
+    top:-10px;
+    left:-10px;
+
+}
+
+#flower2{
+
+    width:50%;
+
+    left:15%;
+    top:-60px;
+
+    z-index:2;
+
+    opacity:0;
+
+    transition:0.5s;
+
+    pointer-events:none;
+
+}
+
+#flower3{
+
+    width:40%;
+
+    left:18.9%;
+    top:-84px;
+
+    z-index:3;
+
+    opacity:0;
+
+    transition:0.5s;
+
+    pointer-events:none;
+
+}
+/*//////////scene3*/
+
+.scene3{
+
+    min-height:100vh;
+
+    position:relative;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-top:-40%
+
+}
+
+/* 종이 */
+
+.river-monster{
+
+    position:absolute;
+
+    width:350px;
+
+    z-index:1;
+
+    left: 300px;
+
+}
+
+/* 강 */
+
+.river{
+
+    position:absolute;
+
+    width:500px;
+
+    z-index:2;
+    left:600px;
+    top:230px;
+
+
+}
+
+/* Hover 영역 */
+
+.river-hover{
+
+    position:absolute;
+
+    width:500px;
+    height:170px;
+
+    z-index:10;
+
+    cursor:pointer;
+
+    background:transparent;
+
+}
+
+/* 글자 */
+
+.river-word{
+
+    position:absolute;
+
+    font-family:"FirstWriting";
+
+    font-size:48px;
+
+    color:white;
+
+    opacity:0;
+
+    transition:0.6s;
+
+    z-index:20;
+
+}
+
+/* 위치 */
+
+.word1{
+
+    top:150px;
+    left:640px;
+
+}
+
+.word2{
+
+    top:270px;
+    left:790px;
+
+}
+
+.word3{
+
+    top:360px;
+    left:780px;
+    transform:rotate(-8deg);
+
+}
+
+.word4{
+
+    top:450px;
+    left:800px;
+    transform:rotate(5deg);
+
+}
+
+.word5{
+
+    top:620px;
+    left:830px;
+
+}
+
+/* ===========================
+   Scene 4
+=========================== */
+
+.scene4{
+
+    min-height:100vh;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+/* 지구 영역 */
+
+.earth-wrap{
+
+    position:absolute;
+
+    left:52%;
+    top:55%;
+
+    width:27%;
+
+    aspect-ratio:1/1;
+
+    transform:translate(-50%,-50%);
+
+    overflow:hidden;
+
+    border-radius:50%;
+
+    z-index:2;
+
+}
+
+/* 지구 */
+
+.earth{
+
+    position:absolute;
+
+    width:100%;
+
+    left:0;
+    top:0;
+
+    z-index:1;
+
+    pointer-events:none;
+
+}
+
+/* 움직이는 지도 (맨 위) */
+
+.map{
+    position:absolute;
+
+    width:130%;
+    left:-15%;
+    top:0;
+
+    z-index:2;
+
+    cursor:grab;
+
+    transform:translateX(var(--moveX, 0px));
+
+    will-change:transform;
+
+    user-select:none;
+}
+
+
+
+/* 몬스터 (제일 뒤) */
+
+.earthmonsters{
+
+    position:absolute;
+
+    width:60%;
+
+    left:50%;
+    top:45%;
+
+    transform:translate(-50%,-50%);
+
+    z-index:1;
+
+    pointer-events:none;
+
+}
+
+/* 글 */
+
+.earth-text{
+
+    position:absolute;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    font-family:"FirstWriting";
+
+    color:white;
+
+    opacity:0;
+
+    transition:0.8s;
+
+    text-align:center;
+
+    z-index:5;
+
+}
+
+.top-text{
+
+    top:25px;
+
+    font-size:40px;
+
+
+
+}
+
+.bottom-text{
+
+    top:650px;
+
+    font-size:40px;
+
+}
+
+/*////////scene5////////////////////*/
+
+
+.scene5{
+
+    position:relative;
+    width:100%;
+    height:100vh;
+    overflow:hidden;
+
+}
+
+/* 거울 */
+
+#mirrorFrame{
+
+    position:absolute;
+
+    left:50%;
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    width:80%;
+    height:auto;
+
+    cursor:pointer;
+
+    transition:opacity .6s;
+
+    z-index:1;
+
+}
+
+/* 사람 */
+
+#mirrorHuman{
+
+    position:absolute;
+
+    left:64%;
+    top:110%;
+
+    transform:translate(-50%,-50%);
+
+    width:80%;
+    height:auto;
+
+    z-index:10;
+
+}
+
+/* 괴물 */
+
+#mirrorMonster{
+
+    position:absolute;
+
+    left:64%;
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    width:44%;
+    height:auto;
+
+    opacity:0;
+
+    transition:opacity 1.2s;
+
+    z-index:3;
+
+}
+
+#mirrorHuman,
+#mirrorMonster {
+    pointer-events: none;
+}
+
+/* 글 */
+
+#mirrorLine1,
+#mirrorLine2,
+#mirrorLine3,
+#mirrorLine4{
+
+    position:absolute;
+
+    left:30%;
+    top:100%;
+    transform:translateX(-50%);
+
+    opacity:0;
+
+    transition:.8s;
+
+    color:black;
+
+    font-family:"FirstWriting";
+
+    z-index:4;
+    font-size: 200%;
+
+}
+
+#mirrorLine1{
+
+    top:32%;
+
+}
+
+#mirrorLine2{
+
+    top:39%;
+
+}
+
+#mirrorLine3{
+
+    top:46%;
+
+}
+
+#mirrorLine4{
+
+    top:53%;
+
+}
+/* ===== Scene 6 ===== */
+
+#scene6{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#scene6Content{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    right: -100%;
+    top: 25%;
+
+    z-index: 1;
+}
+
+#scene6Content.fly{
+    animation: fly 3s linear forwards;
+}
+
+@keyframes fly{
+
+    from{
+        right: -100%;
+    }
+
+    to{
+        right: 0;
+    }
+
+}
+
+#s6{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    
+}
+
+#birdLine1,
+#birdLine2,
+#birdLine3,
+#birdLine4{
+
+    position: absolute;
+
+    font-family: "FirstWriting";
+    font-size: 35px;
+    color: white;
+
+    z-index: 10;
+    margin-top:3%;
+    margin-left:4%;
+    
+
+    
+}
+
+#birdLine1{
+    left: 38%;
+    top: 4%;
+    transform:rotate(-25deg);
+}
+
+#birdLine2{
+    left: 40%;
+    top: 13%;
+    transform:rotate(-25deg);
+}
+
+
+#birdLine3{
+    left: 41%;
+    top: 18%;
+    transform:rotate(-19deg);
+}
+
+#birdLine4{
+    left: 45%;
+    top: 31%;
+    transform:rotate(-20deg);
+}
+
+
+/*//////////////scene7//////*/
+/*
+#scene7{
+    position:relative;
+    width:100vw;
+    height:100vh;
+    overflow:hidden;
+}
+
+#bottle{
+    position:absolute;
+
+    left:8%;
+    bottom:8%;
+
+    width:70%;
+}
+
+#bubbleBox{
+    position:absolute;
+
+    left:-30%;
+    top:0%;
+    width:80vw;
+}
+
+#bubbleBox img{
+    position:absolute;
+
+    width:100%;
+    height:auto;
+
+    opacity:0;
+}
+
+#bubble1{
+    animation:bubble1 3s forwards;
+}
+
+#bubble2{
+    animation:bubble2 3s forwards;
+}
+
+#bubble3{
+    animation:bubble3 3s forwards;
+}
+
+@keyframes bubble1{
+
+0%{
+opacity:1;
+}
+
+33%{
+opacity:1;
+}
+
+34%{
+opacity:0;
+}
+
+100%{
+opacity:0;
+}
+
+}
+
+@keyframes bubble2{
+
+0%{
+opacity:0;
+}
+
+33%{
+opacity:0;
+}
+
+34%{
+opacity:1;
+}
+
+66%{
+opacity:1;
+}
+
+67%{
+opacity:0;
+}
+
+100%{
+opacity:0;
+}
+
+}
+
+@keyframes bubble3{
+
+0%{
+opacity:0;
+}
+
+66%{
+opacity:0;
+}
+
+67%{
+opacity:1;
+}
+
+100%{
+opacity:1;
+}
+
+}
+
+#scene7Text{
+
+    position:absolute;
+
+    left:55%;
+    top:65%;
+
+    color:white;
+    font-family:"FirstWriting";
+    font-size:38px;
+
+}
+
+*/
+
+
+#scene7{
+    position:relative;
+    width:100vw;
+    height:100vh;
+    overflow:hidden;
+    margin-top: 10%;
+}
+
+#bottle{
+    position:absolute;
+
+    left:8%;
+    bottom:8%;
+
+    width:70%;
+}
+
+#bubbleBox{
+    position:absolute;
+
+    left:-30%;
+    top:0%;
+    width:80vw;
+}
+
+#bubbleBox img{
+    position:absolute;
+
+    width:100%;
+    height:auto;
+
+    opacity:0;
+}
+
+/* 애니메이션 시작 */
+
+#bubbleBox.play #bubble1{
+    animation:bubble1 2s linear infinite;
+}
+
+#bubbleBox.play #bubble2{
+    animation:bubble2 2s linear infinite;
+}
+
+#bubbleBox.play #bubble3{
+    animation:bubble3 2s linear infinite;
+}
+
+/* Bubble 1 */
+
+@keyframes bubble1{
+
+    0%,16%{
+        opacity:1;
+    }
+
+    17%,83%{
+        opacity:0;
+    }
+
+    84%,100%{
+        opacity:1;
+    }
+
+}
+
+/* Bubble 2 */
+
+@keyframes bubble2{
+
+    0%,16%{
+        opacity:0;
+    }
+
+    17%,33%{
+        opacity:1;
+    }
+
+    34%,66%{
+        opacity:0;
+    }
+
+    67%,83%{
+        opacity:1;
+    }
+
+    84%,100%{
+        opacity:0;
+    }
+
+}
+
+/* Bubble 3 */
+
+@keyframes bubble3{
+
+    0%,33%{
+        opacity:0;
+    }
+
+    34%,66%{
+        opacity:1;
+    }
+
+    67%,100%{
+        opacity:0;
+    }
+
+}
+
+
+#scene7Text{
+
+    position:absolute;
+
+    left:50%;
+    top:30%;
+
+    color:white;
+    font-family:"FirstWriting";
+    font-size:38px;
+
+}
+
+
+/*//////////////scene8//////*/
+/* =========================
+   Scene 8
+========================= */
+
+#scene8{
+    width:100%;
+    height:100vh;
+    position:relative;
+    overflow:hidden;
+    margin-top: 10%;
+
+}
+
+/* 종이 */
+
+#paper1,
+#paper2,
+#paper3{
+    position:absolute;
+    width:23%;
+    left:23%;
+    top:26%;
+}
+
+#paper2,
+#paper3{
+    opacity:0;
+}
+
+/* 상자 */
+
+#box{
+    position:absolute;
+    width:25%;
+    right:20%;
+    bottom:10%;
+}
+
+/* 첫 문장 */
+
+#line8a{
+    position:absolute;
+    left:50%;
+    top:10%;
+    transform:translateX(-50%);
+    opacity:0;
+    font-family:"FirstWriting";
+
+    font-size:2.3rem;
+    text-align:center;
+}
+
+/* 두 번째 문장 */
+
+#line8b{
+    position:absolute;
+    left:50%;
+    top:10%;
+    transform:translateX(-50%);
+    opacity:0;
+    font-family:"FirstWriting";
+
+    font-size:3rem;
+    text-align:center;
+}
+
+/* paper1 → paper2 */
+
+#paper1.hide{
+    opacity:0;
+}
+
+#paper2.show{
+    opacity:1;
+}
+
+/* paper2 → paper3 */
+
+#paper2.hide{
+    opacity:0;
+}
+
+#paper3.show{
+    opacity:1;
+}
+
+#line8a.show{
+    opacity:1;
+    transition:.8s;
+}
+
+#line8b.show{
+    opacity:1;
+    transition:.8s;
+}
+
+
+/* =======================
+   Scene 9
+======================= */
+
+#scene9{
+    width:100%;
+    height:100vh;
+    position:relative;
+    overflow:hidden;
+    margin-top: 5%;
+
+}
+
+#note{
+    position:absolute;
+    width:30%;
+    left:30%;
+    top:10%;
+    transform: rotate(-6deg);
+}
+
+#pencil{
+    position:absolute;
+    width:10%;
+    left:60%;
+    top:25%;
+    cursor:pointer;
+    transition:1s ease;
+    z-index:20;
+    
+}
+
+#line9_1,
+#line9_2,
+#line9_3{
+
+    position:absolute;
+
+    font-family:"FirstWriting";
+    font-size:30px;
+
+    color:gray;
+
+    opacity:0;
+
+    transition:8s;
+
+    z-index:19;
+
+    transform: rotate(-6deg);
+
+    margin-left:110px;
+    margin-top: 80px;
+
+}
+
+#line9_1{
+    left:26%;
+    top:28%;
+    font-size: 26px;
+}
+
+#line9_2{
+    left:27%;
+    top:39%;
+    font-size: 23px;
+}
+
+#line9_3{
+    left:28%;
+    top:55%;
+}
+
+#line9_1.show,
+#line9_2.show,
+#line9_3.show{
+    opacity:1;
+}
+
+.write1{
+    transform:translate(-400px,-300px) rotate(8deg);
+}
+
+.write1End{
+    transform: translate(0px,-300px) rotate(8deg);
+}
+
+.write2{
+    transform:translate(-400px,-200px)rotate(8deg);
+}
+
+.write2End{
+    transform: translate(0px,-200px) rotate(8deg);
+}
+
+.write3{
+    transform:translate(-400px,-100px)rotate(8deg);
+}
+
+.write3End{
+    transform:translate(0px,-100px)rotate(8deg);
+}
+
+#endingLight{
+
+    position:fixed;
+
+    left:0;
+    top:0;
+
+    width:100%;
+    height:100%;
+
+    background:white;
+
+    opacity:0;
+
+    pointer-events:none;
+
+    transition:opacity 2.5s;
+
+    z-index:999;
+
+}
+
+#endingLight.show{
+    background:#FFF8C9;
+    opacity:1;
+    z-index: -999;
+}
+
+body.ending p{
+
+    color:#6B4A2D !important;
+
+    transition:color 2s;
+
+}
+
+body.ending *{
+    color:#6B4A2D !important;
+    transition:color 2s;
+}
